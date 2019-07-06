@@ -1,0 +1,51 @@
+@import '../../app/App.scss';
+
+.contact-container {
+  padding: 5% 0;
+  background: #ffffff;
+  .main-row {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    grid-column-gap: 20px;
+  }
+  .title {
+    font-size: 22px;
+    color: $blue;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .git {
+    padding: 0 10px;
+    color: $blue;
+    .git-address, .git-phone {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 28px;
+      padding-right: 50px;
+    }
+    .git-phone {
+      margin-top: 20px;
+    }
+  }
+  .cwc {
+    color: $blue;
+    padding-right: 50px;
+    .sub-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 0px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    li {
+      list-style-type: none;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+}
