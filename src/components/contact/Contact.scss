@@ -3,16 +3,25 @@
 .contact-container {
   padding: 5% 0;
   background: #ffffff;
+  @media only screen and (max-width: 500px) {
+    padding: 20px;
+  }
   .main-row {
     display: grid;
     grid-template-columns: 1.2fr 2fr;
     grid-column-gap: 20px;
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
   }
   .title {
     font-size: 22px;
     color: $blue;
     font-weight: 700;
     margin-bottom: 20px;
+    @media only screen and (max-width: 500px) {
+      margin-bottom: 10px;
+    }
   }
   .git {
     padding: 0 10px;
@@ -25,11 +34,18 @@
     }
     .git-phone {
       margin-top: 20px;
+      @media only screen and (max-width: 500px) {
+        margin-top: 10px;
+      }
     }
   }
   .cwc {
     color: $blue;
     padding-right: 50px;
+    @media only screen and (max-width: 500px) {
+      padding: 10px;
+      margin-top: 10px;
+    }
     .sub-row {
       display: grid;
       grid-template-columns: 1fr 1fr;

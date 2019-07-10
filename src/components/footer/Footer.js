@@ -18,9 +18,9 @@ class Footer extends Component {
       <footer>
         <div className="maxWidth">
           <ul>
-            {footer && footer.length > 0 && footer.map((link) => {
+            {footer && footer.length > 0 && footer.map((link, index) => {
               return (
-                <li>{link.name}</li>
+                <li key={index}>{link.name}</li>
               );
             })}
           </ul>

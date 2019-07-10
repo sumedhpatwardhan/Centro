@@ -1,0 +1,66 @@
+@import '../../app/App.scss';
+
+.restaurants-container {
+  padding: 5% 0%;
+  @media only screen and (max-width: 500px) {
+    padding: 15px;
+  }
+  .heading {
+    h1 {
+      color: $blue;
+    }
+    hr {
+      background: $yellow;
+      width: 300px;
+      @media only screen and (max-width: 500px) {
+        width: 210px;
+      }
+    }
+  }
+  .tag {
+    line-height: 32px;
+    margin: 40px 0px;
+    font-size: 25px;
+    color: $blue;
+    font-weight: 600;
+    @media only screen and (max-width: 500px) {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 30px;
+      margin: 30px 0px;
+    }
+  }
+  .card-container {
+    padding: 5% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 20px;
+      padding: 0;
+    }
+    .menu-card {
+      padding: 80px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 50px;
+      @media only screen and (max-width: 500px) {
+        padding: 30px;
+        font-size: 30px;
+      }
+    }
+    .menu-card-prech {
+      background: #294537;
+      font-weight: 600;
+      color: #ffffff;
+      border-radius: 10px;
+    }
+    .menu-card-bloom {
+      background: #F6D7D4;
+      font-weight: 600;
+      color: #E4691D;
+      border-radius: 10px;
+    }
+  }
+}

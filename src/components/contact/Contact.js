@@ -24,7 +24,7 @@ class Contact extends Component {
             <div className="git">
               <h2 className="title">Get in touch</h2>
               <div className="git-address">
-                <p style={{ 'margin-bottom': '10px'}}>ADDRESS:</p>
+                <p style={{ 'marginBottom': '10px'}}>ADDRESS:</p>
                 1202/34, Shirole Road Off Apte Road, Shivaji Nagar, Pune, Maharastra 411004
               </div>
               <p className="git-phone">PHONE: 085308 62222</p>
@@ -34,20 +34,20 @@ class Contact extends Component {
               <div className="sub-row">
                 <div className="reservation">
                   <p>reservations</p>
-                  {reservation && reservation.length > 0 && reservation.map((res) => {
-                    return <li>{res}</li>
+                  {reservation && reservation.length > 0 && reservation.map((res, index) => {
+                    return <li key={index}>{res}</li>
                   })}
                 </div>
                 <div className="explore">
                   <p>explore more</p>
-                    {explore && explore.length > 0 && explore.map((explore) => {
-                      return <li>{explore}</li>
+                    {explore && explore.length > 0 && explore.map((explore, index) => {
+                      return <li key={index}>{explore}</li>
                     })}
                 </div>
               </div>
 
               <div className="social-footer">
-                
+
               </div>
             </div>
           </div>
