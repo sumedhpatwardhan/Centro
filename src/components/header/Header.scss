@@ -1,0 +1,84 @@
+@import '../../app/App.scss';
+
+.header-container {
+  position: absolute;
+  left:0vw;
+  transition: 1s;
+  width: 100vw;
+  max-height: 100vh;
+  margin-top: 0;
+  height: 100vh;
+  background: $yellow;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .taglines-container {
+    @media only screen and (max-width: 500px) {
+      position: absolute;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+  }
+  .taglines {
+    padding: 10px;
+    @media only screen and (max-width: 500px) {
+      text-align: center;
+    }
+    img {
+      width: 200px;
+      margin-bottom: 10px;
+      @media only screen and (max-width: 500px) {
+        width: 150px;
+      }
+    }
+    .namaste {
+      width: 500px;
+      @media only screen and (max-width: 500px) {
+        width: 300px;
+      }
+    }
+    .welcome-to {
+      font-size: 50px;
+      color: $blue;
+      @media only screen and (max-width: 500px) {
+        font-size: 30px;
+      }
+    }
+    .tag {
+      margin: 15px 0px;
+      font-size: 20px;
+      color: $blue;
+    }
+  }
+  .centro-icon {
+    // -webkit-animation:spin 4s linear infinite;
+    // -moz-animation:spin 4s linear infinite;
+    // animation:spin 4s linear infinite;
+    // margin-top: 10%;
+    position: relative;
+    right: -50%;
+    height: 100vh;
+    @media only screen and (max-width: 500px) {
+      width: 200px;
+      margin-top: 30%;
+    }
+  }
+  .hide-in-mobile {
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+  .scroll-down-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    @media only screen and (max-width: 500px) {
+      width: 40px;
+    }
+  }
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

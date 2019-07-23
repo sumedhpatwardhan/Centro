@@ -3,7 +3,7 @@
 .restaurants-container {
   padding: 5% 0%;
   @media only screen and (max-width: 500px) {
-    padding: 15px;
+    padding: 20px;
   }
   .heading {
     h1 {
@@ -45,12 +45,18 @@
       text-align: center;
       cursor: pointer;
       font-size: 50px;
+      img {
+        width: 200px;
+        @media only screen and (max-width: 500px) {
+          width: 100px;
+        }
+      }
       @media only screen and (max-width: 500px) {
         padding: 30px;
         font-size: 30px;
       }
     }
-    .menu-card-prech {
+    .menu-card-perch {
       background: #294537;
       font-weight: 600;
       color: #ffffff;

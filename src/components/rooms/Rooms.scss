@@ -52,11 +52,17 @@
       overflow: hidden;
       cursor: pointer;
       .image-holder {
-        height: 300px;
-        background: grey;
+        height: 100%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        border-radius: 10px;
       }
       .card-title {
-        padding: 20px;
+        padding: 15px;
         font-size: 22px;
         font-weight: 600;
         text-align: center;

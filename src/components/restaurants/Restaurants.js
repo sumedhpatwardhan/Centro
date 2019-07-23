@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Modal from '../common/Modal/Modal';
 import './Restaurants.scss';
 
+const bloom = require('../../static/images/restaurants/bloom.png');
+const perch = require('../../static/images/restaurants/perch.png');
+
 class Restaurants extends Component {
   constructor(props) {
     super(props);
     this.state = {
       menu: [
-        { name : 'prech' },
-        { name : 'bloom' }
+        { name : 'perch', imgUrl: perch },
+        { name : 'bloom', imgUrl: bloom }
       ],
       showModal: false
     }
@@ -40,7 +43,7 @@ class Restaurants extends Component {
             {menu && menu.map((menu, index) => {
               return (
                 <div key={index} className={`menu-card menu-card-${menu.name}`} onClick={this.showModal}>
-                  {menu.name}
+                  <img src={menu.imgUrl}/>
                 </div>
               );
             })}

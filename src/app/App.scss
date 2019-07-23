@@ -11,7 +11,10 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Gotham", sans-serif !important;
+  overflow-x: hidden;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6, p, span {
@@ -23,6 +26,10 @@ $yellow: #FFE938;
 $blue: #313896;
 $pink: #EC0B8B;
 $lightBlue: #29B8F6;
+
+.App {
+  position: relative;
+}
 
 .maxWidth {
   max-width: 1000px;
@@ -52,3 +59,137 @@ $lightBlue: #29B8F6;
     background: #ffffff;
   }
 }
+
+.page-loading {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 2s ease-out;
+  .loader-image {
+    width: 150px;
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 250ms linear;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 250ms linear;
+}
+
+.navbar {
+  position: sticky;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 15px 30px;
+  margin-top: 0;
+  z-index: 999;
+  max-width: 1050px;
+  margin: 0 auto;
+  .hotel-logo {
+    margin-top: -5px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 10px 20px;
+    position: fixed;
+  }
+  .sidebar-drawer-icon {
+    display: block;
+    font-size: 30px;
+    font-weight: bolder;
+    color: $pink;
+  }
+  .nav-item-container {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
+    li {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}
+
+.scrolled-nav {
+  @media only screen and (max-width: 500px) {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    background: #ffffff;
+  }
+}
+
+.not-scrolled-nav {
+  @media only screen and (max-width: 500px) {
+    box-shadow: 0;
+    background: transparent;
+  }
+}
+
+.menu-drawer {
+  .ant-drawer-mask {
+    background: transparent;
+  }
+  .ant-drawer-content-wrapper {
+    height: auto;
+    right: 17%;
+    top: 5%;
+    @media only screen and (max-width: 500px) {
+      right: 9%;
+      top: 4%;
+    }
+    .ant-drawer-content {
+      position: relative;
+      border-radius: 5px;
+      background-color: $pink;
+      p {
+        color: $yellow;
+        font-size: 20px;
+        line-height: 35px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.4s ease-in-out;
+        &:hover {
+          padding-left: 5px;
+        }
+      }
+      .close-btn {
+        width: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.slideOut {
+  transition: 1s;
+  position: absolute;
+  left: 0vw;
+}
+.slideIn {
+  transition: 1s;
+  position: absolute;
+  left: -100vw;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
