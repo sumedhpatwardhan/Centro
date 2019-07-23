@@ -13,6 +13,8 @@ import './App.scss';
 const logo = require('../static/images/centro-logo.png');
 const loader = require('../static/images/loading.png');
 const close = require('../static/images/close.png');
+const menu = require('../static/images/menu.png');
+const pinkMenu = require('../static/images/logo-pink.png');
 
 class App extends Component {
   constructor(props) {
@@ -133,7 +135,11 @@ class App extends Component {
                   </Col>
                   <Col xs={4} sm={4} md={16} lg={14} align="right">
                     <div className="sidebar-drawer-icon">
-                      <Icon onClick={() => this.showDrawer()} type="menu"/>
+                      {this.state.visible ? (
+                        <img src={pinkMenu} onClick={() => this.onClose()} width="35" />
+                      ) : (
+                        <img src={menu} onClick={() => this.showDrawer()} width="30" />
+                      )}
                     </div>
                   </Col>
                 </Row>
@@ -182,7 +188,11 @@ class App extends Component {
                     </Col>
                     <Col xs={4} sm={4} md={16} lg={14} align="right">
                       <div className="sidebar-drawer-icon">
-                        <Icon onClick={() => this.showDrawer()} type="menu"/>
+                        {this.state.visible ? (
+                          <img src={pinkMenu} onClick={() => this.onClose()} width="35" />
+                        ) : (
+                          <img src={menu} onClick={() => this.showDrawer()} width="30" />
+                        )}
                       </div>
                     </Col>
                   </Row>

@@ -11,6 +11,7 @@ const wifi = require('../../static/images/amenities/wifi.png');
 const breakfast = require('../../static/images/amenities/breakfast.png');
 const location = require('../../static/images/amenities/location.png');
 const marketplace = require('../../static/images/amenities/marketplace.png');
+const down = require('../../static/images/scroll-down.png');
 
 class Book extends Component {
   constructor(props) {
@@ -101,6 +102,12 @@ class Book extends Component {
     this.setState({ amenitiesData: amenities });
   }
 
+  scrollToDiv = (id) => {
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
   render () {
     let amenities = this.state.amenitiesData ? this.state.amenitiesData : [];
     let { startValue, endValue, endOpen} = this.state;
@@ -173,7 +180,10 @@ class Book extends Component {
               )
             })}
           </Row>
-          <p className="and-more">and more...</p>
+          <p className="and-more" onClick={() => this.scrollToDiv('#promises')}>and more...</p>
+          <div style={{ textAlign: 'center', cursor: 'pointer' }}>
+            <img src={down} width="50" onClick={() => this.scrollToDiv('#rooms')}/>
+          </div>
         </div>
       </React.Fragment>
     );

@@ -8,7 +8,7 @@
   max-height: 100vh;
   margin-top: 0;
   height: 100vh;
-  background: $yellow;
+  background: $blue;
   margin-bottom: 20px;
   overflow: hidden;
   .taglines-container {
@@ -38,7 +38,7 @@
     }
     .welcome-to {
       font-size: 50px;
-      color: $blue;
+      color: #ffffff;
       @media only screen and (max-width: 500px) {
         font-size: 30px;
       }
@@ -46,7 +46,7 @@
     .tag {
       margin: 15px 0px;
       font-size: 20px;
-      color: $blue;
+      color: #ffffff;
     }
   }
   .centro-icon {

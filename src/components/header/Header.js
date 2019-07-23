@@ -4,6 +4,7 @@ import './Header.scss';
 
 const icon = require('../../static/images/centro-icon.png');
 const logo = require('../../static/images/centro-logo.png');
+const yellowlogo = require('../../static/images/logo-yellow.png');
 const namastay = require('../../static/images/namastay.png');
 const down = require('../../static/images/scroll-down.png');
 
@@ -26,7 +27,7 @@ class Header extends Component {
             </div>
           </Col>
           <Col xs={24} sm={12} md={12} lg={12} align="center" order={2} className="hide-in-mobile">
-            <img src={icon} className="centro-icon"/>
+            <img src={yellowlogo} className="centro-icon"/>
           </Col>
         </Row>
       </div>

@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import './Contact.scss';
 
+const fb = require('../../static/images/Facebook.png');
+const insta = require('../../static/images/Instagram.png');
+const twitter = require('../../static/images/Twitter.png');
+const linkedIn = require('../../static/images/LinkedIn.png');
+
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      reservation: [
-        "Modify/Cancel", "Retrieve Hotel Bill", "Customer Service"
-      ],
-      explore: [
-        "All Inclusive Resorts", "Gift Cards"
-      ]
+      socialIcons: [fb, insta, twitter, linkedIn]
     }
   }
   render () {
-    let reservation = this.state.reservation ? this.state.reservation : [];
-    let explore = this.state.explore ? this.state.explore : [];
+    let socialIcons = this.state.socialIcons ? this.state.socialIcons : [];
 
     return (
       <div className="contact-container">
@@ -31,24 +30,13 @@ class Contact extends Component {
             </div>
             <div className="cwc">
               <h2 className="title">Connect with Centro</h2>
-              <div className="sub-row">
-                <div className="reservation">
-                  <p>reservations</p>
-                  {reservation && reservation.length > 0 && reservation.map((res, index) => {
-                    return <li key={index}>{res}</li>
-                  })}
-                </div>
-                <div className="explore">
-                  <p>explore more</p>
-                    {explore && explore.length > 0 && explore.map((explore, index) => {
-                      return <li key={index}>{explore}</li>
-                    })}
-                </div>
+              <div className="social-icons">
+                {socialIcons && socialIcons.map((icons, index) => {
+                  return <img src={icons} key={index} />
+                })}
               </div>
-
-              <div className="social-footer">
-
-              </div>
+              <p className="legal-links">Privacy Policy</p>
+              <p className="legal-links">Terms & Conditions</p>
             </div>
           </div>
         </div>

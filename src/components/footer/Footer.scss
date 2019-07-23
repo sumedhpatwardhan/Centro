@@ -6,23 +6,9 @@ footer {
   @media only screen and (max-width: 500px) {
     padding: 5%;
   }
-  ul {
+  .made-with {
+    color: $blue;
     text-align: center;
-    padding-left: 0;
-    li {
-      color: $blue;
-      list-style-type: none;
-      display: inline-block;
-      border-right: 2px solid $blue;
-      padding: 0 5%;
-      cursor: pointer;
-      &:last-child {
-        border-right: 0;
-      }
-      @media only screen and (max-width: 500px) {
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-    }
+    font-size: 16px;
   }
 }

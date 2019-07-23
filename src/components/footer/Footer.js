@@ -17,13 +17,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className="maxWidth">
-          <ul>
-            {footer && footer.length > 0 && footer.map((link, index) => {
-              return (
-                <li key={index}>{link.name}</li>
-              );
-            })}
-          </ul>
+          <p className="made-with">Made with love in Pune</p>
         </div>
       </footer>
     );
