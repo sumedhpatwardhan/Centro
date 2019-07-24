@@ -1,0 +1,28 @@
+@import '../../app/App.scss';
+
+.instagram-container {
+  padding: 8% 0;
+  @media only screen and (max-width: 500px) {
+    padding: 7% 5%;
+  }
+  .heading {
+    h1 {
+      color: $blue;
+    }
+    hr {
+      background: $yellow;
+      width: 260px;
+      @media only screen and (max-width: 500px) {
+        width: 38%;
+      }
+    }
+  }
+  .instagram-item-container {
+    margin-top: 50px;
+    .instagram-items {
+      border: 1px solid #222222;
+      background: #364d79;
+      height: 250px;
+    }
+  }
+}

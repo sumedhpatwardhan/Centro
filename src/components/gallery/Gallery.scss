@@ -1,0 +1,73 @@
+@import '../../app/App.scss';
+
+.gallery-container{
+  padding: 8% 0;
+  @media only screen and (max-width: 500px) {
+    padding: 7% 5%;
+  }
+  .heading {
+    h1 {
+      color: $blue;
+    }
+    hr {
+      background-color: $yellow;
+      width: 180px;
+      @media only screen and (max-width: 500px) {
+        width: 38%;
+      }
+    }
+  }
+
+  .gallery-content {
+    margin-top: 50px;
+    @media only screen and (max-width: 500px) {
+      margin-top: 20px;
+    }
+    .gallery-info {
+      padding: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 450px){
+    .slick-slider{
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+  .gallery-item{
+    height: 50vh;
+    background: #364d79;
+    padding: 10px;
+    h3{
+      color: #fff;
+    }
+  }
+}
+
+.gallery-carousel-next-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0,-50%);
+  font-size: 70px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  @media only screen and (max-width: 500px) {
+    font-size: 40px;
+  }
+}
+
+.gallery-carousel-prev-arrow{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0,-50%);
+  font-size: 70px;
+  color: #fff;
+  z-index: 1;
+  cursor: pointer;
+  @media only screen and (max-width: 500px) {
+    font-size: 40px;
+  }
+}

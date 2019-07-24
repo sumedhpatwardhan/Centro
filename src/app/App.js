@@ -8,6 +8,8 @@ import Restaurants from '../components/restaurants/Restaurants';
 import Book from '../components/book/Book';
 import Header from '../components/header/Header';
 import OurPromises from '../components/promises/OurPromises';
+import Gallery from '../components/gallery/Gallery';
+import Instagram from '../components/instagram/Instagram';
 import './App.scss';
 
 const logo = require('../static/images/centro-logo.png');
@@ -24,11 +26,11 @@ class App extends Component {
         { name: 'Stay Over', id:'#booking'},
         { name: 'Rooms', id:'#rooms'},
         { name: 'Restaurants', id:'#restaurants'},
-        { name: 'Gallery', id:null},
+        { name: 'Gallery', id: '#gallery'},
         { name: 'Find Us', id:'#find-us'},
         { name: 'Our Promise', id:'#promises'},
-        { name: 'Contact Us', id:'#contact'},
-        { name: 'Instagram', id:null}
+        { name: 'Instagram', id: '#instagram'},
+        { name: 'Contact Us', id:'#contact'}
       ],
       visible: false,
       isLoading: true,
@@ -149,10 +151,14 @@ class App extends Component {
                   <Rooms />
                 <div id="restaurants"></div>
                   <Restaurants />
+                <div id="gallery"></div>
+                  <Gallery/>
                 <div id="find-us"></div>
                   <FindUs/>
                 <div id="promises"></div>
                   <OurPromises />
+                <div id="instagram"></div>
+                  <Instagram/>
                 <div id="contact"></div>
                   <Contact />
               <Footer />
@@ -202,10 +208,14 @@ class App extends Component {
                     <Rooms />
                   <div id="restaurants"></div>
                     <Restaurants />
+                  <div id="gallery"></div>
+                    <Gallery/>
                   <div id="find-us"></div>
                     <FindUs/>
                   <div id="promises"></div>
                     <OurPromises />
+                  <div id="instagram"></div>
+                    <Instagram/>
                   <div id="contact"></div>
                     <Contact />
                 <Footer />

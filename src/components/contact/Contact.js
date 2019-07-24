@@ -5,12 +5,13 @@ const fb = require('../../static/images/Facebook.png');
 const insta = require('../../static/images/Instagram.png');
 const twitter = require('../../static/images/Twitter.png');
 const linkedIn = require('../../static/images/LinkedIn.png');
+const mail = require('../../static/images/Mail.png');
 
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      socialIcons: [fb, insta, twitter, linkedIn]
+      socialIcons: [fb, insta, twitter, linkedIn, mail]
     }
   }
   render () {

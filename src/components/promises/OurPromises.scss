@@ -45,6 +45,56 @@
           margin: 20px 0;
         }
       }
+      hr {
+        height: 5px;
+        border: 0;
+      }
+    }
+    .thoughtful {
+      h3 {
+        margin-bottom: 0;
+        @media only screen and (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+      img {
+        margin-left: 5px;
+        @media only screen and (max-width: 500px) {
+          width: 40px;
+        }
+      }
+      hr {
+        background: $yellow;
+        width: 240px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 500px) {
+          width: 200px;
+        }
+      }
+    }
+    .sustainability {
+      h3 {
+        margin-bottom: 0;
+        @media only screen and (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+      img {
+        margin-left: 5px;
+        @media only screen and (max-width: 500px) {
+          width: 40px;
+        }
+      }
+      hr {
+        background: #ffffff;
+        width: 170px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 500px) {
+          width: 145px;
+        }
+      }
     }
   }
 
