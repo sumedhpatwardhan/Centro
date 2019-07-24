@@ -50,7 +50,8 @@ class Modal extends Component {
       centerPadding: "60px",
       slidesToShow: 1,
       autoplay: true,
-      speed: 500,
+      speed: 700,
+      swipeToSlide: true,
       nextArrow: <NextArrow/>,
       prevArrow: <PreviousArrow/>
     };
@@ -66,26 +67,16 @@ class Modal extends Component {
           <Row type="flex" justify="space-around" align="middle" className="grid-content">
             <Col xs={24} sm={24} md={14} lg={14}>
               <div className="gallery">
-                <Slider {...settings}>
-                  <div className="gallery-item">
-                    <h3>1</h3>
-                  </div>
-                  <div className="gallery-item">
-                    <h3>2</h3>
-                  </div>
-                  <div className="gallery-item">
-                    <h3>3</h3>
-                  </div>
-                  <div className="gallery-item">
-                    <h3>4</h3>
-                  </div>
-                  <div className="gallery-item">
-                    <h3>5</h3>
-                  </div>
-                  <div className="gallery-item">
-                    <h3>6</h3>
-                  </div>
-                </Slider>
+                {images && (
+                  <Slider {...settings}>
+                     {images.map((img, index) => {
+                      return (
+                        <div className="gallery-item" key={index}>
+                          <img src={img} alt={this.props.title}/>
+                        </div>
+                      )})}
+                  </Slider>
+                )}
             </div>
             </Col>
             <Col xs={24} sm={24} md={10} lg={10}>
