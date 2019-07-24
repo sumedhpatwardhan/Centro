@@ -33,10 +33,10 @@ class App extends Component {
         { name: 'Contact Us', id:'#contact'}
       ],
       visible: false,
-      isLoading: true,
+      isLoading: false,
       fadeOut: true,
       scrolled: false,
-      slideOut: false,
+      slideOut: true,
       slideOutAnimation: false,
       isMobile: false
     }
@@ -190,7 +190,7 @@ class App extends Component {
                 <div style={{ position: 'relative' }}>
                   <Row className={`navbar ${this.state.scrolled ? 'scrolled-nav' : 'not-scrolled-nav'}`} type="flex" justify="space-around" align="middle">
                     <Col xs={20} sm={20} md={8} lg={10}>
-                      <img className="hotel-logo" src={logo} width="100"/>
+                      {!this.state.scrolled && (<img className="hotel-logo" src={logo} width="100"/>)}
                     </Col>
                     <Col xs={4} sm={4} md={16} lg={14} align="right">
                       <div className="sidebar-drawer-icon">

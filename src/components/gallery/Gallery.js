@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Icon, Row, Col } from 'antd';
+import { Icon, Row, Col, Button } from 'antd';
 import Slider from "react-slick";
 import './Gallery.scss';
 
@@ -22,6 +22,14 @@ const PreviousArrow = props => {
 };
 
 class Gallery extends Component {
+  addHyperLink = (id) => {
+    if(id) {
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  }
+
   render () {
     const settings = {
       dots: false,
@@ -63,7 +71,9 @@ class Gallery extends Component {
             </Slider>
           </Col>
           <Col xs={24} sm={24} md={7} lg={7} className="gallery-info">
-            Hello World
+            <h1 className="tag-text">What looks good on screen, looks better in person!</h1>
+            <Button type="primary" className="gallery-book-now-btn" size="large"
+              onClick={() => this.addHyperLink('#booking')}>Book Now</Button>
           </Col>
         </Row>
      </div>

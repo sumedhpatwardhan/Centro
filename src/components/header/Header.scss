@@ -20,6 +20,10 @@
   }
   .taglines {
     padding: 10px;
+    @media only screen and (min-width: 500px) {
+      width: 80%;
+      text-align: left;
+    }
     @media only screen and (max-width: 500px) {
       text-align: center;
     }
@@ -37,18 +41,28 @@
       }
     }
     .welcome-to {
-      font-size: 50px;
+      font-size: 90px;
       color: #ffffff;
       @media only screen and (max-width: 500px) {
-        font-size: 30px;
+        font-size: 45px;
       }
     }
     .tag {
       margin: 15px 0px;
-      font-size: 20px;
-      color: #ffffff;
+      font-size: 30px;
+      color: $lightBlue;
+      @media only screen and (max-width: 500px) {
+        font-size: 20px;
+      }
+    }
+    .centro-logo {
+      width: 400px;
+      @media only screen and (max-width: 500px) {
+        width: 300px;
+      }
     }
   }
+
   .centro-icon {
     // -webkit-animation:spin 4s linear infinite;
     // -moz-animation:spin 4s linear infinite;

@@ -42,6 +42,24 @@
       color: #fff;
     }
   }
+  .tag-text {
+    color: $blue;
+    @media only screen and (max-width: 500px) {
+      font-size: 20px;
+    }
+  }
+  .gallery-book-now-btn {
+    margin-top: 10px;
+    background: $pink;
+    border-color: $pink;
+    text-transform: uppercase;
+    height: auto;
+    padding: 7px 20px;
+    font-size: 16px;
+    @media only screen and (max-width: 500px) {
+      margin-top: 20px;
+    }
+  }
 }
 
 .gallery-carousel-next-arrow {

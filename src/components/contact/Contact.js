@@ -23,11 +23,12 @@ class Contact extends Component {
           <div className="main-row">
             <div className="git">
               <h2 className="title">Get in touch</h2>
+              <p className="git-email">EMAIL: hello@centrohotels.in</p>
+              <p className="git-phone">PHONE: 085308 62222</p>
               <div className="git-address">
                 <p style={{ 'marginBottom': '10px'}}>ADDRESS:</p>
-                1202/34, Shirole Road Off Apte Road, Shivaji Nagar, Pune, Maharastra 411004
+                1202/34, Shirole Road Off Apte Road, Pune, Maharastra 411004
               </div>
-              <p className="git-phone">PHONE: 085308 62222</p>
             </div>
             <div className="cwc">
               <h2 className="title">Connect with Centro</h2>

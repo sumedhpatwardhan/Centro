@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import { Row, Col } from 'antd';
 import './OurPromises.scss';
 
-const namaste = require('../../static/images/amenities/hospitality.png');
-const clean = require('../../static/images/amenities/cleanliness.png');
-const beds = require('../../static/images/amenities/bed.png');
-const showers = require('../../static/images/amenities/showers.png');
-const wifi = require('../../static/images/amenities/wifi.png');
-const breakfast = require('../../static/images/amenities/breakfast.png');
-const location = require('../../static/images/amenities/location.png');
-const marketplace = require('../../static/images/amenities/marketplace.png');
+const namaste = require('../../static/images/promises/namaste.png');
+const clean = require('../../static/images/promises/clean.png');
+const beds = require('../../static/images/promises/beds.png');
+const showers = require('../../static/images/promises/shower.png');
+const wifi = require('../../static/images/promises/wifi.png');
+const breakfast = require('../../static/images/promises/breakfast.png');
+const location = require('../../static/images/promises/location.png');
+const marketplace = require('../../static/images/promises/market.png');
 const thoughtful = require('../../static/images/thoughtful.png');
 const sustainability = require('../../static/images/sustainability.png');
 

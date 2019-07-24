@@ -26,17 +26,26 @@
   .git {
     padding: 0 10px;
     color: $blue;
-    .git-address, .git-phone {
+    .git-address, .git-phone, .git-email {
       font-size: 17px;
       font-weight: 500;
       line-height: 28px;
       padding-right: 50px;
     }
-    .git-phone {
+    .git-phone, .git-email {
       margin-top: 20px;
       @media only screen and (max-width: 500px) {
         margin-top: 10px;
       }
+    }
+    .git-phone {
+      margin-bottom: 20px;
+      @media only screen and (max-width: 500px) {
+        margin-bottom: 10px;
+      }
+    }
+    .git-email {
+      padding-right: 0;
     }
   }
   .cwc {

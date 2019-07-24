@@ -22,7 +22,7 @@ class Header extends Component {
             <div className="taglines">
               <img src={namastay} className="namaste"/>
               <p className="welcome-to">Welcome to</p>
-              <img src={logo} />
+              <img src={logo} className="centro-logo"/>
               <p className="tag">The hotel that's smart, <br /> located in the city's heart!</p>
             </div>
           </Col>

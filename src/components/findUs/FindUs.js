@@ -12,8 +12,24 @@ class FindUs extends Component {
       lat: 18.522422,
       lng: 73.843897
     },
-    zoom: 15
+    zoom: 18
   };
+
+  renderMarkers = (map, maps) => {
+    let { center } = this.props;
+    var contentString = "Hello Centro"
+    let infowindow = new maps.InfoWindow({
+      content: contentString
+    });
+    let marker = new maps.Marker({
+      position: center,
+      map,
+      title: 'Hotel Centro'
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
 
   render () {
     return (
@@ -30,6 +46,8 @@ class FindUs extends Component {
               <GoogleMapReact
                 defaultCenter={this.props.center}
                 defaultZoom={this.props.zoom}
+                bootstrapURLKeys={{ key: 'AIzaSyCB40lktauxtzjNUw1G8tygU6auaaxvm6E' }}
+                onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
               >
               <Marker lat={this.props.center.lat} lng={this.props.center.lng} />
               </GoogleMapReact>
