@@ -28,12 +28,20 @@ class Rooms extends Component {
       ],
       showModal: false,
       roomType: 'Cosy',
-      roomImages: []
+      roomImages: [],
+      modalColor: 'yellow'
     }
   }
 
   showModal = (room, index) => {
     let { rooms } = this.state;
+    if(room === 'Cosy') {
+      this.setState({ modalColor: 'pink' })
+    } else if (room === "Superior") {
+      this.setState({ modalColor: 'blue' })
+    } else {
+      this.setState({ modalColor: 'yellow' })
+    }
     this.setState({ showModal: true, roomType : room, roomImages: rooms[index].images });
   }
 
@@ -67,7 +75,11 @@ class Rooms extends Component {
           </div>
 
         </div>
-        <Modal show={this.state.showModal} closeModal={this.hideModal} title={roomType} images={this.state.roomImages}>
+        <Modal show={this.state.showModal}
+          closeModal={this.hideModal}
+          title={roomType}
+          images={this.state.roomImages}
+          modalColor={this.state.modalColor}>
           <p className="about-room"
             dangerouslySetInnerHTML={{
                 __html: sanitizeHtml(roomInfo[roomType].desc, {

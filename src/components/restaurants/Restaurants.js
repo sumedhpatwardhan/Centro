@@ -17,7 +17,12 @@ class Restaurants extends Component {
     }
   }
 
-  showModal = () => {
+  showModal = (name) => {
+    if(name === 'perch') {
+      this.setState({ modalColor: 'yellow' })
+    } else {
+      this.setState({ modalColor: 'blue' })
+    }
     this.setState({ showModal: true });
   }
 
@@ -42,7 +47,7 @@ class Restaurants extends Component {
           <div className="card-container">
             {menu && menu.map((menu, index) => {
               return (
-                <div key={index} className={`menu-card menu-card-${menu.name}`} onClick={this.showModal}>
+                <div key={index} className={`menu-card menu-card-${menu.name}`} onClick={() => this.showModal(menu.name)}>
                   <img src={menu.imgUrl}/>
                 </div>
               );
@@ -50,7 +55,7 @@ class Restaurants extends Component {
           </div>
 
         </div>
-        <Modal show={this.state.showModal} closeModal={this.hideModal}>
+        <Modal show={this.state.showModal} closeModal={this.hideModal} modalColor={this.state.modalColor}>
 
         </Modal>
       </div>

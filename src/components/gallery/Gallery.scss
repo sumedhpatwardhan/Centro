@@ -25,12 +25,18 @@
     }
     .gallery-info {
       padding: 20px;
+      margin-left: 20px;
+      @media only screen and (max-width: 500px) {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
   }
 
   @media only screen and (max-width: 450px){
     .slick-slider{
-      width: 90%;
+      width: 100%;
       margin: 10px auto;
     }
   }
