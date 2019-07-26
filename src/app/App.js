@@ -36,7 +36,7 @@ class App extends Component {
       isLoading: false,
       fadeOut: true,
       scrolled: false,
-      slideOut: false,
+      slideOut: true,
       slideOutAnimation: false,
       isMobile: false
     }

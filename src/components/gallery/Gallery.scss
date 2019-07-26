@@ -39,14 +39,21 @@
       width: 100%;
       margin: 10px auto;
     }
+    .slick-slide {
+      border-radius: 10px;
+    }
   }
   .gallery-item{
-    height: 50vh;
-    background: #364d79;
-    padding: 10px;
-    h3{
-      color: #fff;
+    height: 400px;
+    @media only screen and (max-width: 500px) {
+      height: 270px;
     }
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    border-radius: 10px;
+    overflow: hidden;
   }
   .tag-text {
     color: $blue;

@@ -26,6 +26,9 @@
     }
   }
   .hdwd-form {
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
     position: absolute;
     top: 0;
     right: 0;
