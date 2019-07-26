@@ -23,7 +23,9 @@ class OurPromises extends Component {
             <h1>Our Promises</h1>
             <hr />
           </div>
+        </div>
 
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <Row type="flex" justify="space-around" align="middle" className="margin-bottom-20">
             <Col xs={24} sm={24} md={12} lg={12} className="col-padding">
               <Row type="flex" justify="space-around" align="middle">

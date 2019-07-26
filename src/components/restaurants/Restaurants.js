@@ -24,10 +24,12 @@ class Restaurants extends Component {
       this.setState({ modalColor: 'blue' })
     }
     this.setState({ showModal: true });
+    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
   }
 
   hideModal = () => {
     this.setState({ showModal: false });
+    document.getElementsByTagName('body')[0].style.overflowY = "scroll";
   }
 
   render () {

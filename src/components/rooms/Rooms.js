@@ -43,10 +43,12 @@ class Rooms extends Component {
       this.setState({ modalColor: 'yellow' })
     }
     this.setState({ showModal: true, roomType : room, roomImages: rooms[index].images });
+    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
   }
 
   hideModal = () => {
     this.setState({ showModal: false });
+    document.getElementsByTagName('body')[0].style.overflowY = "scroll";
   }
 
   render () {

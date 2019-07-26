@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Input, Row, Col } from 'antd';
 import './Contact.scss';
 
 const fb = require('../../static/images/Facebook.png');
@@ -6,19 +7,22 @@ const insta = require('../../static/images/Instagram.png');
 const twitter = require('../../static/images/Twitter.png');
 const linkedIn = require('../../static/images/LinkedIn.png');
 const mail = require('../../static/images/Mail.png');
+const close = require('../../static/images/close.png');
+const { TextArea } = Input;
 
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      socialIcons: [fb, insta, twitter, linkedIn, mail]
+      socialIcons: [fb, insta, twitter, linkedIn, mail],
+      slide: false
     }
   }
   render () {
     let socialIcons = this.state.socialIcons ? this.state.socialIcons : [];
-
     return (
       <div className="contact-container">
+        <h1 className="h-d-w-d" onClick={() => this.setState({ slide: true })}>How did we do?</h1>
         <div className="maxWidth">
           <div className="main-row">
             <div className="git">
@@ -41,6 +45,33 @@ class Contact extends Component {
               <p className="legal-links">Terms & Conditions</p>
             </div>
           </div>
+        </div>
+        <div className={`hdwd-form ${this.state.slide ? 'hdwd-form-slide-in' : 'hdwd-form-slide-out'}`}>
+          <div style={{ textAlign: 'right' }}>
+            <img src={close} className="close-btn" onClick={() => this.setState({ slide: false })}/>
+          </div>
+          <Row gutter={16}>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>NAME</label>
+              <Input autosuggest="off"/>
+            </Col>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>E-MAIL ID</label>
+              <Input autosuggest="off"/>
+            </Col>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>PHONE NO</label>
+              <Input autoComplete="off"/>
+            </Col>
+          </Row>
+          <label style={{ fontSize: '18px' }}>
+            We're smart so we know there's always room for improvement, so let us know how did we did!
+          </label>
+          <TextArea rows={2} />
+          <label style={{ fontSize: '18px' }}>
+            Any other enquiries?
+          </label>
+          <TextArea rows={2} />
         </div>
       </div>
     );

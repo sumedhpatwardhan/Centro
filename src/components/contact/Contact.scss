@@ -1,10 +1,64 @@
 @import '../../app/App.scss';
 
 .contact-container {
+  position: relative;
   padding: 5% 0;
   background: #ffffff;
   @media only screen and (max-width: 500px) {
     padding: 20px;
+  }
+  .h-d-w-d {
+    position: absolute;
+    right: 20px;
+    top: 10%;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    font-size: 20px;
+    margin: 0;
+    background: $pink;
+    color: $yellow;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
+  }
+  .hdwd-form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $pink;
+    padding: 2% 3%;
+    border-radius: 15px 15px 5px 15px;
+    max-width: 700px;
+    label {
+      color: $yellow;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .ant-input {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .close-btn {
+      width: 25px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+  }
+  .hdwd-form-slide-in {
+    transition: 1s;
+    position: absolute;
+    right: 0;
+    opacity: 1;
+  }
+  .hdwd-form-slide-out {
+    transition: 1s;
+    position: absolute;
+    right: -200vw;
+    opacity: 0;
   }
   .main-row {
     display: grid;
