@@ -164,7 +164,7 @@ class Book extends Component {
         <div className="maxWidth amenities">
           <p className="amenities-heading">A warm bed, warm people and a chill vibe awaits you.</p>
           <Row type="flex" justify="space-between" align="bottom">
-            <Col xs={24} sm={24} md={19} lg={19}>
+            <Col xs={24} sm={24} md={16} lg={16}>
               <Row className="amenities-container">
                 {amenities && amenities.map((amenity, index) => {
                   return (
@@ -183,7 +183,7 @@ class Book extends Component {
                 })}
               </Row>
             </Col>
-            <Col xs={24} sm={24} md={4} lg={4}>
+            <Col xs={24} sm={24} md={7} lg={7}>
               <p className="and-more" onClick={() => this.scrollToDiv('#promises')}>and more...</p>
             </Col>
           </Row>

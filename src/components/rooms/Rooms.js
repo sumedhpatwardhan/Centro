@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'antd';
 import sanitizeHtml from "sanitize-html";
 import Modal from '../common/Modal/Modal';
 import roomInfo from './roomInfo';
@@ -29,8 +30,10 @@ class Rooms extends Component {
       showModal: false,
       roomType: 'Cosy',
       roomImages: [],
-      modalColor: 'yellow'
+      modalColor: 'yellow',
+      showAmenities: false
     }
+    document.body.style.overflowY = "scroll";
   }
 
   showModal = (room, index) => {
@@ -43,12 +46,12 @@ class Rooms extends Component {
       this.setState({ modalColor: 'yellow' })
     }
     this.setState({ showModal: true, roomType : room, roomImages: rooms[index].images });
-    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden";
   }
 
   hideModal = () => {
-    this.setState({ showModal: false });
-    document.getElementsByTagName('body')[0].style.overflowY = "scroll";
+    this.setState({ showModal: false, showAmenities: false });
+    document.body.style.overflowY = "scroll";
   }
 
   render () {
@@ -90,6 +93,19 @@ class Rooms extends Component {
                 })
             }}
           />
+        {!this.state.showAmenities &&
+          <Button className={`${roomType}-amenities-button amentites-toggle-btn`} onClick={() => this.setState({ showAmenities: true })}>Amenities</Button>
+        }
+        {this.state.showAmenities &&
+          <p className={`about-room ${roomType}-amenities-background`}
+            dangerouslySetInnerHTML={{
+                __html: sanitizeHtml(roomInfo[roomType].amenities, {
+                    allowedTags: ["p", "strong", "b", "br","a", "li", "h2", "h3", "ul"],
+                    allowedAttributes: []
+                })
+            }}
+          />
+        }
         </Modal>
       </div>
     );

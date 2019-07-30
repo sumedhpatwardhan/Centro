@@ -21,25 +21,13 @@ const PreviousArrow = props => {
   );
 };
 
-// <Slider
-//   asNavFor={this.state.nav2}
-//   ref={slider => (this.slider1 = slider)}
-//   className="primary-slider"
-// >
-// {images.map((img, index) => {
-//   return (
-//     <div className="main-slider-images" key={index}>
-//       <img src={img} alt={this.props.title}/>
-//     </div>
-//   )})}
-// </Slider>
+let img1 = require('../../../static/images/gallery/img5.jpg');
 
 class Modal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nav1: null,
-      nav2: null
+      defaultImg: [img1]
     };
   }
 
@@ -55,6 +43,7 @@ class Modal extends Component {
       nextArrow: <NextArrow/>,
       prevArrow: <PreviousArrow/>
     };
+    let { defaultImg } = this.state;
     let { show, closeModal, children, images } = this.props;
     let showModalCSS = show ? "show-modal" : "hide-modal";
     let modalColor = this.props.modalColor ? this.props.modalColor : 'yellow'
@@ -64,12 +53,21 @@ class Modal extends Component {
           <div className="close-btn" onClick={() => closeModal()}>
             <Icon type="close" className={`close-icon ${modalColor === 'blue' || modalColor === 'pink' ? 'yellow-text' : 'blue-text'}`}/>
           </div>
-          <Row type="flex" justify="space-around" align="middle" className="grid-content">
+          <Row type="flex" justify="space-around" align="top" className="grid-content">
             <Col xs={24} sm={24} md={14} lg={14}>
               <div className="gallery">
-                {images && (
+                {images ? (
                   <Slider {...settings}>
                      {images.map((img, index) => {
+                      return (
+                        <div className="gallery-item" key={index}>
+                          <img src={img} alt={this.props.title}/>
+                        </div>
+                      )})}
+                  </Slider>
+                ) : (
+                  <Slider {...settings}>
+                    {defaultImg && defaultImg.map((img, index) => {
                       return (
                         <div className="gallery-item" key={index}>
                           <img src={img} alt={this.props.title}/>

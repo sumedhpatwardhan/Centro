@@ -13,15 +13,17 @@ class Restaurants extends Component {
         { name : 'perch', imgUrl: perch },
         { name : 'bloom', imgUrl: bloom }
       ],
-      showModal: false
+      showModal: false,
+      modalType: 'prech'
     }
   }
 
   showModal = (name) => {
+    this.setState({ modalType: name });
     if(name === 'perch') {
-      this.setState({ modalColor: 'yellow' })
-    } else {
       this.setState({ modalColor: 'blue' })
+    } else {
+      this.setState({ modalColor: 'yellow' })
     }
     this.setState({ showModal: true });
     document.getElementsByTagName('body')[0].style.overflowY = "hidden";
@@ -33,8 +35,8 @@ class Restaurants extends Component {
   }
 
   render () {
-    let { menu } = this.state;
-
+    let { menu, modalType } = this.state;
+    console.log(modalType);
     return (
       <div className="restaurants-container">
         <div className="maxWidth">
@@ -44,7 +46,7 @@ class Restaurants extends Component {
             <hr />
           </div>
 
-          <p className="tag">Take your pick, we guarantee it will<br /> not be easy to choose!</p>
+          <p className="tag">Take your pick, we guarantee it will not be easy to choose!</p>
 
           <div className="card-container">
             {menu && menu.map((menu, index) => {
@@ -58,7 +60,23 @@ class Restaurants extends Component {
 
         </div>
         <Modal show={this.state.showModal} closeModal={this.hideModal} modalColor={this.state.modalColor}>
-
+          {modalType === 'perch' ? (
+            <div className="perch-container">
+              <img src={perch} />
+              <p>Perch is a 24 hour vegetarian restaurant.<br/> From breakfast favourites like
+              indori Poha and Pongal to a delicious all day menu with snacks, comfort food and proper khana
+              (in case you're really hungry), we serve it all. We also stay open throughout the night
+              (yup, you read it right!) so all you night owls will surely want to perch at perch 24/7!</p>
+            </div>
+          ):(
+            <div className="bloom-container">
+              <img src={bloom}/>
+              <p>Bloom is an organic cafe, rooftop garden and community space all in one! With waffles, smoothie bowls,
+              flatbreads, sandwiches, pastas and more on the menue, you'll surely have cravings everytime you think
+              about bloom! The rooftop garden is much needed break for the hustle and bestie for your work, eat, meet
+              friends, and just BLOOM!</p>
+            </div>
+          )}
         </Modal>
       </div>
     );

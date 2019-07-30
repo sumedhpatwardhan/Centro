@@ -46,10 +46,8 @@ class Contact extends Component {
             </div>
           </div>
         </div>
-        <div className={`hdwd-form ${this.state.slide ? 'hdwd-form-slide-in' : 'hdwd-form-slide-out'}`}>
-          <div style={{ textAlign: 'right' }}>
-            <img src={close} className="close-btn" onClick={() => this.setState({ slide: false })}/>
-          </div>
+
+        <div className="hdwd-mobile-form">
           <Row gutter={16}>
             <Col xs={24} sm={24} md={8} lg={8}>
               <label>NAME</label>
@@ -69,6 +67,34 @@ class Contact extends Component {
           </label>
           <TextArea rows={2} />
           <label style={{ fontSize: '18px' }}>
+            Any other enquiries?
+          </label>
+          <TextArea rows={2} />
+        </div>
+
+        <div className={`hdwd-form ${this.state.slide ? 'hdwd-form-slide-in' : 'hdwd-form-slide-out'}`}>
+          <div style={{ textAlign: 'right' }}>
+            <img src={close} className="close-btn" onClick={() => this.setState({ slide: false })}/>
+          </div>
+          <Row gutter={16}>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>NAME</label>
+              <Input autosuggest="off"/>
+            </Col>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>E-MAIL ID</label>
+              <Input autosuggest="off"/>
+            </Col>
+            <Col xs={24} sm={24} md={8} lg={8}>
+              <label>PHONE NO</label>
+              <Input autoComplete="off"/>
+            </Col>
+          </Row>
+          <label style={{ fontSize: '16px', marginTop:5, marginBottom: 0 }}>
+            We're smart so we know there's always room for improvement, so let us know how did we did!
+          </label>
+          <TextArea rows={2}/>
+          <label style={{ fontSize: '16px', marginBottom: 0 }}>
             Any other enquiries?
           </label>
           <TextArea rows={2} />

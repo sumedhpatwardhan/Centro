@@ -69,4 +69,24 @@
       }
     }
   }
+  .amentites-toggle-btn {
+    @media only screen and (max-width: 500px) {
+      margin-left: 20px;
+    }
+  }
+  .Cosy-amenities-button {
+    background: $blue;
+    color: #ffffff;
+    border-color: $blue;
+  }
+  .Superior-amenities-button {
+    background: $pink;
+    color: $yellow;
+    border-color: $pink;
+  }
+  .Grand-amenities-button {
+    background: $pink;
+    border-color: $pink;
+    color: $yellow;
+  }
 }

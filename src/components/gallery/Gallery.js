@@ -63,7 +63,7 @@ class Gallery extends Component {
           <hr />
         </div>
         <Row className="gallery-content">
-          <Col xs={24} sm={24} md={15} lg={15}>
+          <Col xs={24} sm={24} md={12} lg={12}>
             {img &&
               <Slider {...settings}>
                 {img && img.map((img, index) => {
