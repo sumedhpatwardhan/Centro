@@ -8,6 +8,7 @@
     padding: 20px;
   }
   .h-d-w-d {
+    font-family: "Gotham Rounded Medium", sans-serif;
     position: absolute;
     right: 20px;
     top: 10%;
@@ -34,6 +35,7 @@
       display: block;
     }
     label {
+      font-family: "Gotham Rounded Medium", sans-serif;
       color: $yellow;
       font-size: 14px !important;
       display: block;
@@ -55,12 +57,14 @@
     border-radius: 15px 15px 5px 15px;
     max-width: 700px;
     label {
+      font-family: "Gotham Rounded Medium", sans-serif;
       color: $yellow;
       font-size: 14px;
       margin-bottom: 10px;
       display: block;
     }
     .ant-input {
+      font-family: "Gotham Rounded Medium", sans-serif;
       margin-top: 5px;
       margin-bottom: 10px;
     }
@@ -91,6 +95,7 @@
     }
   }
   .title {
+    font-family: "Gotham Rounded Bold", sans-serif;
     font-size: 22px;
     color: $blue;
     font-weight: 700;
@@ -103,6 +108,7 @@
     padding: 0 10px;
     color: $blue;
     .git-address, .git-phone, .git-email {
+      font-family: "Gotham Rounded Medium", sans-serif;
       font-size: 17px;
       font-weight: 500;
       line-height: 28px;
@@ -140,7 +146,18 @@
       margin-bottom: 20px;
     }
     .legal-links {
+      font-family: "Gotham Rounded Medium", sans-serif;
       margin-bottom: 8px;
     }
+  }
+  .feedback-submit-button {
+    margin-top: 5px;
+    background: $yellow;
+    border-color: $yellow;
+    color: $pink;
+    text-transform: uppercase;
+    height: auto;
+    padding: 7px 20px;
+    font-size: 16px;
   }
 }

@@ -7,6 +7,7 @@
   }
   .heading {
     h1 {
+      font-family: "Gotham Rounded Medium", sans-serif;
       color: $blue;
     }
     hr {
@@ -24,6 +25,7 @@
       margin-top: 20px;
     }
     .gallery-info {
+      font-family: "Gotham Rounded Medium", sans-serif;
       padding: 20px;
       margin-left: 50px;
       padding-top: 0;
@@ -63,6 +65,7 @@
     }
   }
   .gallery-book-now-btn {
+    font-family: "Gotham Rounded Medium", sans-serif;
     margin-top: 10px;
     background: $pink;
     border-color: $pink;

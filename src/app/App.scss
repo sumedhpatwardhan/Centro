@@ -1,27 +1,50 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-// @font-face {
-//   font-family: "Arciform";
-//   font-display: auto;
-//   src: local("Arciform"), url("/static/font/Arciform.otf")
-//     format("opentype");
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+    font-family: "Gotham Rounded Medium";
+    src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot");
+    src: url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/dffb2b80813d195d26fa4d2aad48b059.svg#Gotham Rounded") format("svg");
+}
 
 @font-face {
-  font-family: "Gotham";
-  font-display: auto;
-  src: url("https://cdn.jsdelivr.net/npm/gotham-fonts@1.0.3/fonts/GothamRounded-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Gotham Rounded Light";
+    src: url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.eot");
+    src: url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/1549fe8fd297f1e6501a3d6ad7f77394.svg#Gotham Rounded") format("svg");
+}
+
+@font-face {
+    font-family: "Gotham Rounded Book";
+    src: url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.eot");
+    src: url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/d31d488d2171c1668c15962fc6cf1ef7.svg#Gotham Rounded") format("svg");
+}
+
+@font-face {
+    font-family: "Gotham Rounded Bold";
+    src: url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.eot");
+    src: url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/ae8f19f441b335c3fda30febf5069c5a.svg#Gotham Rounded") format("svg");
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Gotham", sans-serif !important;
+  font-family: "Gotham Rounded Light", sans-serif;
   overflow-x: hidden;
   position: relative;
 }
@@ -163,7 +186,7 @@ $lightBlue: #29B8F6;
   }
   .ant-drawer-content-wrapper {
     height: auto;
-    right: 17%;
+    right: 8%;
     top: 5%;
     @media only screen and (max-width: 500px) {
       right: 9%;
@@ -174,6 +197,7 @@ $lightBlue: #29B8F6;
       border-radius: 5px;
       background-color: $pink;
       p {
+        font-family: "Gotham Rounded Bold", sans-serif;
         color: $yellow;
         font-size: 20px;
         line-height: 35px;

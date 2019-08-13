@@ -29,6 +29,7 @@
     grid-template-columns: 1fr 1fr;
     padding: 15px 20px;
     background: #f1f1f1;
+    font-family: "Gotham Rounded Medium", sans-serif;
     .close-btn {
       text-align: right;
       cursor: pointer;
@@ -49,9 +50,11 @@
   }
   .yellow-text {
     color: $yellow;
+    font-family: "Gotham Rounded Medium", sans-serif;
   }
   .blue-text {
     color: $blue;
+    font-family: "Gotham Rounded Medium", sans-serif;
   }
   .modal-content-holder {
     position: relative;
@@ -120,6 +123,7 @@
       margin: 20px auto 10px auto;
       padding-right: 5px;
       ul {
+        font-family: "Gotham Rounded Medium", sans-serif;
         padding-left: 15px;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -127,16 +131,19 @@
         margin-top: 10px;
       }
       h3 {
+        font-family: "Gotham Rounded Medium", sans-serif;
         color: inherit;
         margin-bottom: 0;
       }
       h2 {
+        font-family: "Gotham Rounded Medium", sans-serif;
         color: inherit;
       }
       @media only screen and (max-width: 500px) {
         max-width: 88%;
         margin: 20px auto;
         ul {
+          font-family: "Gotham Rounded Medium", sans-serif;
           padding-left: 15px;
           display: grid;
           grid-template-columns: 1fr;
@@ -150,7 +157,9 @@
       color: $blue !important;
       padding: 10px 20px;
       border-radius: 5px;
+      font-family: "Gotham Rounded Medium", sans-serif;
       h3 {
+        font-family: "Gotham Rounded Medium", sans-serif;
         margin: 5px 0;
       }
     }
@@ -160,6 +169,7 @@
       padding: 10px 20px;
       border-radius: 5px;
       h3 {
+        font-family: "Gotham Rounded Medium", sans-serif;
         margin: 5px 0;
       }
     }
@@ -169,6 +179,7 @@
       padding: 10px 20px;
       border-radius: 5px;
       h3 {
+        font-family: "Gotham Rounded Medium", sans-serif;
         margin: 5px 0;
       }
     }

@@ -13,6 +13,7 @@ import Instagram from '../components/instagram/Instagram';
 import './App.scss';
 
 const logo = require('../static/images/centro-logo.png');
+const logoWhite = require('../static/images/logo-white.png');
 const loader = require('../static/images/loading.png');
 const close = require('../static/images/close.png');
 const menu = require('../static/images/menu.png');
@@ -33,11 +34,7 @@ class App extends Component {
         { name: 'Contact Us', id:'#contact'}
       ],
       visible: false,
-      isLoading: false,
-      fadeOut: true,
-      scrolled: false,
       slideOut: true,
-      slideOutAnimation: false,
       isMobile: false
     }
   }
@@ -79,23 +76,9 @@ class App extends Component {
   componentDidMount() {
     this.isMobile();
     let { isLoading } = this.state;
-
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 2000);
-
-    setTimeout(() => {
-      this.setState({ fadeOut: false });
-    }, 1500);
-
     setTimeout(() => {
       this.setState({ slideOut: true });
-    }, 5000);
-
-    setTimeout(() => {
-      this.setState({ slideOutAnimation: true });
-    }, 4100)
-
+    }, 3300);
     if(window) {
       window.addEventListener('scroll', () => {
        if(window.scrollY === 0){
@@ -133,7 +116,7 @@ class App extends Component {
               <div style={{ position: 'relative' }}>
                 <Row className={`navbar ${this.state.scrolled ? 'scrolled-nav' : 'not-scrolled-nav'}`} type="flex" justify="space-around" align="middle">
                   <Col xs={20} sm={20} md={8} lg={10}>
-                    <img className="hotel-logo" src={logo} width="100"/>
+                    <img className="hotel-logo" src={`${this.state.scrolled ? logo : logoWhite}`} width="100"/>
                   </Col>
                   <Col xs={4} sm={4} md={16} lg={14} align="right">
                     <div className="sidebar-drawer-icon">
@@ -183,7 +166,7 @@ class App extends Component {
           <div className="App">
             {!slideOut ? (
               <div className={`${slideOutAnimation ? 'slideIn': 'slideOut'}`}>
-                <Header />
+                <Header isMobile={isMobile}/>
               </div>
             ):(
               <React.Fragment>

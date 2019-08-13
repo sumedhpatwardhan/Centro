@@ -41,6 +41,7 @@
       }
     }
     .welcome-to {
+      font-family: "Gotham Rounded Medium", sans-serif;
       font-size: 90px;
       color: #ffffff;
       @media only screen and (max-width: 500px) {
@@ -48,6 +49,7 @@
       }
     }
     .tag {
+      font-family: "Gotham Rounded Medium", sans-serif;
       margin: 15px 0px;
       font-size: 30px;
       color: $lightBlue;
@@ -58,16 +60,13 @@
     .centro-logo {
       width: 400px;
       @media only screen and (max-width: 500px) {
-        width: 300px;
+        width: 270px;
+        margin: 20px 0;
       }
     }
   }
 
   .centro-icon {
-    // -webkit-animation:spin 4s linear infinite;
-    // -moz-animation:spin 4s linear infinite;
-    // animation:spin 4s linear infinite;
-    // margin-top: 10%;
     position: relative;
     right: -50%;
     height: 100vh;
@@ -93,6 +92,31 @@
   }
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.banner-image-holder {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  .slick-slider {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  .banner-image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: all 250ms linear;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: all 250ms linear;
+}

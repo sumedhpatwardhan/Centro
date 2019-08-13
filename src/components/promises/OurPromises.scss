@@ -6,6 +6,7 @@
     padding: 20px;
   }
   .heading {
+    font-family: "Gotham Rounded Medium", sans-serif;
     h1 {
       color: $blue;
     }
@@ -21,10 +22,12 @@
   .col-padding {
     padding: 30px;
     h3 {
+      font-family: "Gotham Rounded Medium", sans-serif;
       font-size: 18px;
       margin-bottom: 20px;
     }
     p {
+      font-family: "Gotham Rounded Medium", sans-serif;
       font-size: 15px;
     }
   }
@@ -39,9 +42,11 @@
         width: 100%;
       }
       ol {
+        font-family: "Gotham Rounded Medium", sans-serif;
         padding-left: 0;
         list-style-type: none;
         li {
+          font-family: "Gotham Rounded Medium", sans-serif;
           margin: 20px 0;
         }
       }
@@ -111,9 +116,11 @@
   }
 
   .blue-text {
+    font-family: "Gotham Rounded Medium", sans-serif;
     color: $blue;
   }
   .white-text {
+    font-family: "Gotham Rounded Medium", sans-serif;
     color: #ffffff;
   }
   .blue-bg {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Input, Row, Col } from 'antd';
+import { Input, Row, Col, Button } from 'antd';
 import './Contact.scss';
 
 const fb = require('../../static/images/Facebook.png');
@@ -62,14 +62,15 @@ class Contact extends Component {
               <Input autoComplete="off"/>
             </Col>
           </Row>
-          <label style={{ fontSize: '18px' }}>
+          <label style={{ fontSize: '18px', fontFamily: 'Gotham Rounded Bold' }}>
             We're smart so we know there's always room for improvement, so let us know how did we did!
           </label>
           <TextArea rows={2} />
-          <label style={{ fontSize: '18px' }}>
+          <label style={{ fontSize: '18px', fontFamily: 'Gotham Rounded Bold' }}>
             Any other enquiries?
           </label>
           <TextArea rows={2} />
+          <Button type="primary" style={{ width: '100%' }} className="feedback-submit-button">Submit</Button>
         </div>
 
         <div className={`hdwd-form ${this.state.slide ? 'hdwd-form-slide-in' : 'hdwd-form-slide-out'}`}>
@@ -90,14 +91,17 @@ class Contact extends Component {
               <Input autoComplete="off"/>
             </Col>
           </Row>
-          <label style={{ fontSize: '16px', marginTop:5, marginBottom: 0 }}>
+          <label style={{ fontSize: '16px', marginTop:5, marginBottom: 0, fontFamily: 'Gotham Rounded Bold'  }}>
             We're smart so we know there's always room for improvement, so let us know how did we did!
           </label>
           <TextArea rows={2}/>
-          <label style={{ fontSize: '16px', marginBottom: 0 }}>
+          <label style={{ fontSize: '16px', marginBottom: 0, fontFamily: 'Gotham Rounded Bold'  }}>
             Any other enquiries?
           </label>
           <TextArea rows={2} />
+          <div style={{ textAlign: 'center' }}>
+            <Button type="primary" className="feedback-submit-button">Submit</Button>
+          </div>
         </div>
       </div>
     );

@@ -7,14 +7,19 @@
   }
   .heading {
     h1 {
+      font-family: "Gotham Rounded Medium", sans-serif;
       color: $blue;
     }
     hr {
       background-color: $yellow;
       width: 17%;
+      @media only screen and (max-width: 500px) {
+        width: 40%;
+      }
     }
   }
   .tag {
+    font-family: "Gotham Rounded Medium", sans-serif;
     line-height: 32px;
     margin: 30px 0px;
     font-size: 22px;
@@ -62,6 +67,7 @@
         border-radius: 10px;
       }
       .card-title {
+        font-family: "Gotham Rounded Medium", sans-serif;
         padding: 15px;
         font-size: 22px;
         font-weight: 600;
