@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import moment from 'moment';
 import { Button, DatePicker, Row, Col, InputNumber } from 'antd';
 import sanitizeHtml from "sanitize-html";
 import './Book.scss';
@@ -16,7 +17,7 @@ const down = require('../../static/images/scroll-down.png');
 class Book extends Component {
   constructor(props) {
     super(props);
-    this.props = {
+    this.state = {
       amenitiesData: [],
       startValue: null,
       endValue: null,

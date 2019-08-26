@@ -217,6 +217,16 @@ $lightBlue: #29B8F6;
   }
 }
 
+.ant-calendar-picker-container {
+  .ant-calendar {
+    .ant-calendar-panel {
+      .ant-calendar-input-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
 .slideOut {
   transition: 1s;
   position: absolute;

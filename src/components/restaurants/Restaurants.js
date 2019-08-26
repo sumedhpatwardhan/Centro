@@ -36,7 +36,6 @@ class Restaurants extends Component {
 
   render () {
     let { menu, modalType } = this.state;
-    console.log(modalType);
     return (
       <div className="restaurants-container">
         <div className="maxWidth">
